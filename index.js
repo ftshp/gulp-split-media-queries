@@ -43,6 +43,8 @@ module.exports = function(options) {
 		let otherContents = '';
 		let mediaContents = '';
 		let contents = '';
+		let minwWidthMatch = null;
+		let minBreakpoint = 0;
 
 		const addToOthers = function (contents, key) {
 			if (key) {
@@ -52,13 +54,11 @@ module.exports = function(options) {
 			}
 
 			otherContents += contents + '\n\n';
-		}
+		};
 
 		const addToMedia = function (contents, key) {
 			mediaContents += '@media ' + key + '{\n' + contents + '\n}\n\n';
-		}
-
-		const minwWidthMatch, minBreakpoint;
+		};
 
 		mediaKeys.forEach(function(key) {
 			contents = stringify(styles[key]);

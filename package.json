@@ -1,6 +1,6 @@
 {
   "name": "gulp-split-media-queries",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin splits all media queries above defined breakpoint into separated file.",
   "main": "index.js",
   "scripts": {

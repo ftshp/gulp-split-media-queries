@@ -2,15 +2,20 @@ gulp-split-media-queries
 --------------------------
 This plugin splits all media queries above defined breakpoint into separated file. 
 
+ADD THIS PACAGE
+-------
+```
+yarn add -D gulp-split-media-queries
+```
 USAGE
 -------
 ```js
 const gulp = require('gulp');
-const extractMediaQueries = require('gulp-split-media-queries');
+const splitMediaQueries = require('gulp-split-media-queries');
 
 gulp.task('build', function() {
     gulp.src('assets/styles/all.css')
-    .pipe(extractMediaQueries({
+    .pipe(splitMediaQueries({
         breakpoint: 1024, // default is 768
     }))
     .pipe(gulp.dest('build'));
