@@ -2,7 +2,7 @@ gulp-split-media-queries
 --------------------------
 This plugin splits all media queries above defined breakpoint into separated file. 
 
-ADD THIS PACAGE
+ADD THIS PACKAGE
 -------
 ```
 yarn add -D gulp-split-media-queries
@@ -15,10 +15,10 @@ const splitMediaQueries = require('gulp-split-media-queries');
 
 gulp.task('build', function() {
     gulp.src('assets/styles/all.css')
-    .pipe(splitMediaQueries({
-        breakpoint: 1024, // default is 768
-    }))
-    .pipe(gulp.dest('build'));
+        .pipe(splitMediaQueries({
+            breakpoint: 1024, // default is 768
+        }))
+        .pipe(gulp.dest('build'));
 });
 ```
 `all.css` file:
@@ -79,3 +79,5 @@ Include it in HTML:
 <link rel="stylesheet" type="text/css" href="all.css" />
 <link rel="stylesheet" type="text/css" href="all-above-1024.css" media="(min-width: 1024px)" />
 ```
+_Thanks for inspiration:_
+https://www.npmjs.com/package/gulp-extract-media-queries
